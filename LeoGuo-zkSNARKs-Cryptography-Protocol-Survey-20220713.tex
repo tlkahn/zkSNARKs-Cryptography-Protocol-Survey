@@ -1,4 +1,4 @@
-% Created 2022-07-13 Wed 01:21
+% Created 2022-07-13 Wed 14:28
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -14,6 +14,16 @@
 \usepackage{hyperref}
 \usepackage[backend=biber, natbib=true, style=alphabetic, sorting=ynt]{biblatex}
 \addbibresource{/Users/toeinriver/Dropbox/emacs/bibliography/references.bib}
+\usepackage{xcolor}
+\hypersetup{colorlinks, linkcolor={red!50!black}, citecolor={blue!50!black}, urlcolor={blue!80!black}}
+\usepackage{verbatimbox}
+\usepackage{markdown}
+\usepackage{framed}
+\usepackage{quoting}
+\colorlet{shadecolor}{gray!20}
+\newenvironment{shadedquotation}{\begin{shaded*} \quoting[leftmargin=0pt, vskip=0pt]}{\endquoting\end{shaded*}}
+\usepackage[width=.75\textwidth]{caption}
+\usepackage{float}
 \author{Leo Guo}
 \date{\today}
 \title{zkSNARKs Cryptography Protocol Survey}
@@ -31,11 +41,11 @@
 
 
 \section{zkSNARKs Cryptography Protocol Survey}
-\label{sec:org36784af}
+\label{sec:org74478ec}
 \subsection{Basic information}
-\label{sec:org78f249f}
-\begin{center}
-\begin{tabular}{ll}
+\label{sec:orgfac4bb2}
+
+\begin{longtable}{|p{2cm}|p{10cm}|}
 \hline
 Item & zkSNARKs Cryptography Protocol Survey\\
 Name & Leo Guo\\
@@ -43,13 +53,13 @@ Discord Account & toeinriver7694\\
 Study Group & team3\\
 Assignment & zkSNARKs Cryptography Protocol Survey\\
 GitHub & \url{https://github.com/tlkahn/zkSNARKs-Cryptography-Protocol-Survey}\\
-\end{tabular}
-\end{center}
+\hline
+\end{longtable}
 
-\subsection{Introduction}
-\label{sec:org05183bd}
-\subsubsection{Overview}
-\label{sec:orgca4d5b9}
+\subsection{Research scope}
+\label{sec:orge7fef86}
+\subsection{Overview}
+\label{sec:org4a72a4f}
 zkSNARK is one of the most important Zero-Knowledge Proof (ZKP) methods used in privacy computing and blockchain technology. zkSNARK stands for: zero-knowledge Succinct Non-Interactive ARgument of Knowledge, which is a protocol through which a prover can quickly convince a verifier on knowledge of a secret without revealing anything about it. Nir Bitansky, Ran Canetti, Alessandro Chiesa, and Eran Tromer introduced the term zk-SNARKs in 2012 \cite{2012}
 The core theoritecal components of zkSNARK are summarized below:
 \begin{itemize}
@@ -64,25 +74,27 @@ According to Goldwasser, Micali, and Rackoff \cite{1985}, who first introduced t
 The first constructions of SNARK protocols were inspired by the PCP theorem \cite{10.1145/273865.273901} which shows that NP statements have "short" Probabilistic Checkable Proofs (PCP). New instantiations were found which allow faster and shorter proofs, when a preprocessing state is permitted. With proper pre-processing and arithematization, the proof becomes realistically feasible w.r.t proof size, running time, verification time etc. The formal definition is below \cite{2012}:
 
 \begin{quote}
-The length of the proof \(\Pi\) that \(\mathcal{P}(y,w,vgrs)\) outputs, as well as the running time of \(\mathrm{nu}(priv, y, \Pi)\), is bounded by:
+\begin{shadedquotation}
+  The length of the proof \(\Pi\) that \(\mathcal{P}(y,w,vgrs)\) outputs, as well as the running time of \(\mathrm{nu}(priv, y, \Pi)\), is bounded by:
 
-\[
+  \[
   p(k+\lvert y \rvert) = p(k + \lvert M \rvert + \lvert x \rvert + log t)
   \]
 
-where \(p\) is a universal polynomial that does not depend on \(\mathcal{R} \subseteq \mathcal{R}_\mathcal{U}\). \(\mathcal{R}_\mathcal{U}\) is the universal relation \cite{10.5555/872747.873184}, a.k.a the set \(\mathcal{R}_\mathcal{U}\) of instance-witness pairs \((y, w)\), where \(y=(M, x, t), \lvert w \rvert \le t\) and \(M\) is a Turing machine such that M accepts \((x,w)\) after at most \(t\) steps.
+  where \(p\) is a universal polynomial that does not depend on \(\mathcal{R} \subseteq \mathcal{R}_\mathcal{U}\). \(\mathcal{R}_\mathcal{U}\) is the universal relation \cite{10.5555/872747.873184}, a.k.a the set \(\mathcal{R}_\mathcal{U}\) of instance-witness pairs \((y, w)\), where \(y=(M, x, t), \lvert w \rvert \le t\) and \(M\) is a Turing machine such that M accepts \((x,w)\) after at most \(t\) steps.
+\end{shadedquotation}
 \end{quote}
 
 \item "Non-interactive" (N) means the prover can publish a single one-way message to the verifiers, with no need of further back-and-forth interactions.
-\item "ARguments" (AR) means the verifier is only protected against computationally limited provers. Provers with computationally unlimitted power can fake proofs/arguments on wrong statements (with enough computational power, any public-key encryption can be broken). This is also called “computational soundness”, as opposed to “perfect soundness”. \footnote{Christian Reitwiessner's blog: \href{https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/}{zkSNARKs in a nutshell}\label{orgcec628f}}
+\item "ARguments" (AR) means the verifier is only protected against computationally limited provers. Provers with computationally unlimitted power can fake proofs/arguments on wrong statements (with enough computational power, any public-key encryption can be broken). This is also called “computational soundness”, as opposed to “perfect soundness”. \footnote{Christian Reitwiessner's blog: \href{https://blog.ethereum.org/2016/12/05/zksnarks-in-a-nutshell/}{zkSNARKs in a nutshell}\label{orgabd83a9}}
 \item "of Knowledge":
 
-SNARKs are SNARGs where computational soundness is replaced by knowledge soundness, which roughly means the prover is not able to construct a proof without knowing the witness \(w\). \textsuperscript{\ref{orgcec628f}}
+SNARKs are SNARGs where computational soundness is replaced by knowledge soundness, which roughly means the prover is not able to construct a proof without knowing the witness \(w\). \textsuperscript{\ref{orgabd83a9}}
 \end{itemize}
 
-\subsubsection{Big idea}
-\label{sec:orgca6c4f5}
-As the name hints, zkSNARKs have four main components \textsuperscript{\ref{orgcec628f}}:
+\subsection{Big idea}
+\label{sec:org0ca84b9}
+As the name hints, zkSNARKs have four main components \textsuperscript{\ref{orgabd83a9}}:
 
 \begin{itemize}
 \item Encoding the problem as a polynomial
@@ -90,7 +102,9 @@ As the name hints, zkSNARKs have four main components \textsuperscript{\ref{orgc
 The problems are compiled into polynomials, e.g. \(t(x)h(x) = w(x)v(x)\), the Quadratic Span Programs (QSP) as in \cite{10.1007/978-3-642-38348-9_37}, where the equality holds \emph{iff} the program is computed correctly. The prover convinces the verifier that the above equality holds. The formal definition in \cite{2012} is:
 
 \begin{quote}
-\ldots{} membership of an instance \(y\) in an \(NP\) language \(L\) can be verified in time that is bounded by \(p(k, \lvert y \rvert, \log t)\), where \(t\) is the time to evaluate the \(NP\) verification relation for \(L\) on input \(y\), \textbf{\(p\) is a fixed polynomial independent of \(L\)}, and \(k\) is a security parameter that determines the soundness error.
+\begin{shadedquotation}
+... membership of an instance $y$ in an $NP$ language $L$ can be verified in time that is bounded by $p(k, \lvert y \rvert, \log t)$, where $t$ is the time to evaluate the $NP$ verification relation for $L$ on input $y$, $p$ is a fixed polynomial independent of $L$, and $k$ is a security parameter that determines the soundness error.
+\end{shadedquotation}
 \end{quote}
 
 In general, zkSNARKs can be contructed from four categories \cite{Nitulescu2020zkSNARKsAG}:
@@ -101,11 +115,13 @@ In general, zkSNARKs can be contructed from four categories \cite{Nitulescu2020z
 The oldest SNARK construction methodology is explained:
 
 \begin{quote}
+\begin{shadedquotation}
 \ldots{}is based on PCP characterization of NP, and it is first achieved in the random oracle model (ROM), which gave only heuristical security. The idea is to apply the random oracle-based Fiat-Shamir transform to Kilian’s succinct PCP-based proof system [Kil92], achieving logarithmic proof size and verification time. Later, the construction is improved by removing the use of the random oracles and replacing them with extractable collision-resistant hash functions (ECRH).
 
 The work of [CL08] proposed the PCP + Merkle Tree (MT)+ Private Information Retrieval (PIR) approach to “squash” Kilian’s four-message protocol into a two-message protocol.
 
 In both cases, we do not obtain knowledge soundness, but only plain adaptive soundness.
+\end{shadedquotation}
 \end{quote}
 
 \item QAP
@@ -113,15 +129,19 @@ In both cases, we do not obtain knowledge soundness, but only plain adaptive sou
 The most popular and widely implemented SNARK construction shares a central starting point on quadratic programs introduced by \cite{10.1007/978-3-642-38348-9_37}. The proof/verification framework build SNARKs for programs encoded as boolean or arithmetic circuits.
 
 \begin{quote}
-\emph{Arithmetic Circuits}: Informally, an arithmetic circuit consists of wires that carry values from a field F and connect to addition and multiplication gates.
+\begin{shadedquotation}
+/Arithmetic Circuits/: Informally, an arithmetic circuit consists of wires that carry values from a field F and connect to addition and multiplication gates.
 
-\emph{Boolean Circuits}: A boolean circuit consists of logical gates and of a set of wires between the gates. The wires carry values over \{0, 1\}.
+/Boolean Circuits/: A boolean circuit consists of logical gates and of a set of wires between the gates. The wires carry values over {0, 1}.
+\end{shadedquotation}
 \end{quote}
 
 This approach has led to fast progress towards practical verifiable computations. The first implementation is Pinocchio \cite{6547113}.
 
 \begin{quote}
-A SNARK scheme for a circuit has to enable verification of proofs for (Arithmetic or Boolean) Circ-SAT problem, i.e., a prover, given a circuit (\(\mathcal{C}\)) has to convince the verifier that it knows an assignment of its inputs that makes the output true.
+\begin{shadedquotation}
+A SNARK scheme for a circuit has to enable verification of proofs for (Arithmetic or Boolean) Circ-SAT problem, i.e., a prover, given a circuit ($\mathcal{C}$) has to convince the verifier that it knows an assignment of its inputs that makes the output true.
+\end{shadedquotation}
 \end{quote}
 
 Circ-SAT problem is the NP-complete decision problem of determining whether a given circuit has an assignment of its inputs that makes the output true. A very important line of works focuses on building SNARKs for circuit satisfiability and have as a central starting point the framework based on quadratic span programs (QSP) \cite{10.1007/978-3-642-38348-9_37}. QSP consists of multiple polynomials \(\nu_0, \dots, \nu_i; \omega_0, \dots, \omega_i\) over a Galois field \(F\) and a target polynomial \(t\). The QSP is accepted \emph{iff} \(t\) divides \(\nu_a \times \omega_b\) where \(nu_a\) and \(\omega_b\) is constructed from the witness \(w\) and the original polynomials \(\nu_0, \dots, \nu_i; \omega_0, \dots, \omega_i\).
@@ -129,7 +149,9 @@ Circ-SAT problem is the NP-complete decision problem of determining whether a gi
 Further more, QSP can be improved by QAP. \cite{Nitulescu2020zkSNARKsAG}
 
 \begin{quote}
+\begin{shadedquotation}
 Parno eta. \cite{6547113} defined QAP,a similar notion for arithmetic circuits,namely Quadratic Arithmetic Programs (QAP). More recently, an improved version for boolean circuits, the Square Span Programs (SSP) was presented which consequentially has led to a simplified version for arithmetic circuits, Square Arithmetic Programs (SAP), proposed in \cite{10.1007/978-3-319-63715-0_20}.
+\end{shadedquotation}
 \end{quote}
 
 \item Linear Interactive Proof (LIP)
@@ -137,9 +159,11 @@ Parno eta. \cite{6547113} defined QAP,a similar notion for arithmetic circuits,n
 According to \cite{Nitulescu2020zkSNARKsAG},
 
 \begin{quote}
+\begin{shadedquotation}
 The QAP approach was generalized under the concept of Linear Interactive Proof (LIP), a form of interactive ZK proofs where security holds under the assumption that the prover is restricted to compute only linear combinations of its inputs.
 
 These proofs can then be turned into (designated-verifier) SNARKs by using an extractable linear-only encryption scheme.
+\end{shadedquotation}
 \end{quote}
 
 \item Polynomial Interactive Oracle Proof (PIOP)
@@ -147,6 +171,7 @@ These proofs can then be turned into (designated-verifier) SNARKs by using an ex
 According to \cite{Nitulescu2020zkSNARKsAG}:
 
 \begin{quote}
+\begin{shadedquotation}
 As we saw previously, SNARKs are commonly build in a modular way. Recent works propose schemes that follow a new framework, enabling more possibilities such as: \textbf{transparent constructions (without a trusted setup), recursion, aggregation properties, post-quantum security}, etc.
 
 Modular instantiations of recent SNARKs employs polynomial \emph{interactive oracle proofs (IOP)} for the information theoretic step, and \emph{polynomial commitments} for the cryptographic compilation. One advantage of using polynomial commitments is that \textbf{the setup is only needed for the commitment scheme and is thus independent of the statement being proven.} This allows these SNARKs to be \textbf{universal} as opposed to the circuit-based SNARKs presented in the previous section. Another advantage is that the choice of polynomial commitment scheme facilitates finding the right tradeoff between performance and security.
@@ -168,15 +193,16 @@ Using polynomial commitment schemes and Fiat-Shamir heuristic, the previous chec
 
 Remark that the only step where we employ cryptographic techniques is the final one. In this cryp- tographic compilation step the oracles from before are replaced by a suitable cryptographic realization: Polynomial Commitments (PC) in Sonic, Marlin and Plonk (\cite{inproceedings}, \cite{inproceedings}, \cite{Gabizon2019PLONKPO}). \footnote{The computation of polynomial commitment can be optimized by table lookup. \cite{Gabizon2020plookupAS}} Polynomial commitments allow to check efficiently a series of identities on low-degree polynomials resulting from the arithmetization step. This comes at the expense of introducing computational hardness assumptions for security and sometimes a trusted setup.
 \end{itemize}
+\end{shadedquotation}
 \end{quote}
 
 A typical modern zkSNARK process can be illustrated as follows:
 
-\begin{figure}[htbp]
-\centering
+\begin{center}
 \includegraphics[width=.9\linewidth]{./snark-process.png}
-\caption{Source: unknown, but appears to be frequently credited to cryptographer Eran Tromer.}
-\end{figure}
+\end{center}
+
+Source of the above image is unknown, meanwhile it appears to be frequently credited to cryptographer Eran Tromer.
 
 Polynomial commitments e.g. KZG, are a commitment scheme introduced by \cite{Kate} which are extremely powerful constructs that allow a prover to commit a polynomial and show evaluations of that polynomial on any point with a single group element-sized proof in constant time. As such, Kate commitments and its variants lie at the heart of many PIOP-style zkSNARK constructions (such as Marlin and PLONK).
 \end{itemize}
@@ -226,55 +252,202 @@ Non-interactive & Blum-Feldman-Micali 1988 & Groth-Ostrovsky-Sahai 2006\\
 The prover obfuscates the values \(e(g^a h^r, g^b h^s), e(g^c h^t, g), e(\pi, h)\) by multiplying with a non-zero secret point \(k\) from the contextual elliptic curve (EC) on both sides, thus the verifier can still verify the correctness on hidden values.
 \end{itemize}
 
-\subsection{Overview of research scope}
-\label{sec:org9f9d47b}
-
-
 \subsection{Theortical development}
-\label{sec:orgdf6c73d}
-\subsubsection{Protocol overview}
-\label{sec:org3c3ab39}
+\label{sec:orgd886935}
+
+\subsubsection{Pre-Pinocchio}
+\label{sec:org061df1d}
+
+Based on the retrospective summary by \cite{6547113},
+
+\begin{quote}
+\begin{shadedquotation}
+Considerable systems and theory research has looked at the problem of verifying computation. However, most of this work has either been function specific, relied on assumptions we prefer to avoid, or simply failed to pass basic practicality requirements. Function specific solutions are often efficient, but only for a narrow class of computations. More general solutions often rely on assumptions that may not apply. For example, systems based on replication assume uncorrelated failures, while those based on Trusted Computing or other secure hardware assume that physical protections cannot be defeated. Finally, the theory community has produced a number of beautiful, general purpose protocols (\cite{1985}, \cite{10.1145/129712.129782}, \cite{10.1137/S0097539795284959}, \cite{10.1145/2699436}, \cite{10.1007/978-3-642-17373-8_19}, \cite{10.1007/978-3-642-14623-7_25}, \cite{10.1007/978-3-642-14623-7_26}, \cite{10.5555/1834954}), that offer compelling asymptotics. In practice however, because they rely on complex Probabilistically Checkable Proofs (PCPs) \cite{10.1145/273865.273901} or fully-homomorphic encryption (FHE) \cite{10.5555/1834954}, the performance is unacceptable – verifying small instances would take hundreds to trillions of years\ldots{}
+\end{shadedquotation}
+\end{quote}
+
+\subsubsection{Pinocchio}
+\label{sec:orgf1a11fd}
+
+Pinocchio \cite{6547113} was the first \textbf{practical} implementation of a zk proving system; for instance, before adoption of \cite{groth_size_nodate}, earliest version of zCash implemented Pinocchio to deliver their original shielded transaction protocol \cite{DBLP:journals/corr/abs-2008-00881}. (\emph{Heavily quoted from \cite{6547113} below}).
+
+\begin{quote}
+\begin{shadedquotation}
+  \begin{itemize}
+  \item Major features
+
+  \begin{itemize}
+  \item Supports public verifiable computation, which allows an untrusted worker to produce signatures of computation
+
+  \item Supports zero-knowledge verifiable computation, in which the worker convinces the client that it knows an input with a particular property, without revealing any information about the input.
+
+  \item Verification time is typically 10ms: 5-7 orders of magnitude less than previous work.
+
+  \item The first general-purpose system to demonstrate verification cheaper than native execution (for some apps).
+
+  \item Reduces the worker’s proof effort by an additional 19-60\(\times\)
+
+  \item Generalizes to zero-knowledge proofs at a negligible cost over the base protocol.
+
+  \item Provides an end-to-end toolchain that compiles a subset of C into programs that implement the verifiable computation protocol.
+  \end{itemize}
+
+  \item Design ideas
+
+  To achieve efficient verifiable computation, Pinocchio combines quadratic programs (QSP), a computational model introduced by Gennaro et al. \cite{10.1007/978-3-642-38348-9_37}, with a series of theoretical refinements and systems engineering to produce an end-to-end toolchain for verifying computations. Specifically, via an improved protocol and proof technique, we slash the cost of key generation by 61%, and the cost of producing a proof by 64%.
+
+  From a developer’s perspective, Pinocchio provides a \emph{circuit compiler} that transforms C code into a circuit representation (both Boolean and arithmetic supported), thus converts the circuit into a quadratic program, and then generates programs to execute the cryptographic protocol.
+
+  \begin{center}
+  \includegraphics[width=.9\linewidth]{./Pinocchio toolchain.png}
+  \end{center}
+  \end{itemize}
+
+  \begin{itemize}
+  \item Contributions
+
+  \begin{enumerate}
+  \item An end-to-end system for efficiently verifying computation performed by one or more untrusted workers. This includes a compiler that converts C code into a format suitable for verification, as well as a suite of tools for running the actual protocol.
+
+  \item Theoretical and systems-level improvements that bring performance down by 5-7 orders of magnitude, and hence into the realm of plausibility.
+
+  \item An evaluation on seven real C applications, showing verification faster than 32-bit native integer execution for some apps.
+  \end{enumerate}
+  \end{itemize}
+\end{shadedquotation}
+\end{quote}
+
+\subsubsection{Groth16:}
+\label{sec:org014578b}
+
+In 2016, Jens Groth formalized a proving system that significantly improved performance \cite{groth_size_nodate} compared to Pinocchio.
+
+Despite the requried trusted setup, Groth16 currently remains the fastest known zk-SNARK with the smallest proof size. Groth16's trusted setup is per circuit thus non-universal. \footnote{\href{https://medium.com/coinmonks/comparing-general-purpose-zk-snarks-51ce124c60bd}{Comparing General Purpose zk-SNARKs}} New SNARKs often use Groth16 as the performance benchmark.
+
+Below are heavily quoted from \cite{groth_size_nodate} and \cite{Nitulescu2020zkSNARKsAG}:
+
+\begin{quote}
+\begin{shadedquotation}
+\begin{itemize}
+\item Major features
 
 \begin{itemize}
-\item Pinocchio \footnote{See \href{https://medium.com/coinmonks/comparing-general-purpose-zk-snarks-51ce124c60bd}{Source}}:
+\item For arithmetic circuits, Groth16 proofs consist of only 2 elements in G1 and 1 in G2, compared to Pinocchio’s 7 elements in G1, and 1 in G2.
 
-\item Groth16:
+\item Verification is faster. Verifiers need to compute a number of exponentiations proportional to the statement size and check a single pairing product equation with just 3 pairings instead of 12.
 
-Currently the fastest and smallest known zk-SNARK. It’s used in Zcash, amongst others. Groth16 is non-universal; the setup is always tied to one specific circuit. Because of the speed and small proof size, performance of new zk-SNARKS is often compared to Groth16.
+\item Shorter CRS.
 
-\begin{itemize}
-\item Major features:
-
-\item Design ideas
-
-\item Main contributions
+\item The construction can be instantiated with any type of pairings including Type III pairings \cite{pairing_guide}, which are the most efficient pairings.
 \end{itemize}
 
-\item Sonic:
+Based on the observation of "arithmetic circuit satisfiability in the Table, of the size of the common reference string (CRS), the size of the proof, the prover’s computation, the verifier’s computation, and the number of pairing product equations used to verify a proof", Groth16 performs better than the state of the art on all efficiency parameters when published.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.9\linewidth]{./groth16-comp.png}
+\caption{Comparison for arithmetic circuit satisfiability with \(\ell\)-element statement, \(m\) wires, \(n\) multiplication gates.}
+\end{figure}
+
+\item Design ideas.
+
+Groth16's construction is simplified compared to the one in \cite{6547113}. Popular research \cite{Nitulescu2020zkSNARKsAG} have observed that the proof elements are not duplicated with respect to some random factor and this is not needed for the extraction, since the security relies on a stronger model, the Generic Group Model(GGM) and not on q-PKE assumption.
+
+The Generic Group Model \cite{10.1007/3-540-69053-0_18}, \cite{Maurer05} is an idealized cryptographic model, where algorithms do not exploit any special structure of the representation of the group elements and can thus be applied in any cyclic group. In this model, the adversary is only given access to a randomly chosen encoding of a group, instead of efficient encodings, such as those used by the finite field or elliptic curve groups used in practice. The model includes an oracle that executes the (additive) group operation. Therefore, one can efficiently extract the coefficients used to express an output of the oracle as a linear combination of initial group elements.
+
+To describe Groth’s construction, we consider the relation \(\mathcal{R}\) implemented as an arithmetic circuit for a total number of wires \(m\). We denote by \(\mathcal{T}_{io} ={1,2,\dots \ell}\), the indices corresponding to the public input and public output values of the circuit wires (corresponding to the statement \(u\)) and by \(\mathcal{T}_{mid} = {\ell+1, \dots m}\), the wire indices corresponding to private input and non-input, non-output intermediate values (for the witness \(w\)).
+
+\hyperref[fig:org19d835f]{Below} is the birdview of Groth16's algorithm.
+\end{itemize}
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=400px]{./groth16-architecture.png}
+\caption{\label{fig:org19d835f}Groth16 Construction from QAP.}
+\end{figure}
+
+
+\begin{itemize}
+\item Contributions
+
+\begin{itemize}
+\item Our first contribution is a pairing-based (preprocessing) SNARK for arithmetic circuit satisfiability, which is an NP-complete language. In our SNARK we work with:
+
+\begin{enumerate}
+\item \emph{asymmetric pairings} for higher efficiency,
+
+\item a proof is only 3 group elements
+
+\item verification consists of checking \emph{a single pairing product equations using 3 pairings in total}.
+\end{enumerate}
+
+\item As our second contribution we answer an open question of Bitansky, Chiesa, Ishai, Ostrovsky and Paneth (TCC 2013) by showing that \emph{2-move linear interactive proofs cannot have a linear decision procedure}. It follows from this that \emph{SNARGs where the prover and verifier use generic asymmetric bilinear group operations cannot consist of a single group element}. This gives the \emph{first lower bound for pairing-based SNARGs}. It remains an intriguing open problem whether this lower bound can be extended to rule out 2 group element SNARGs, which would prove optimality of our 3 element construction.
+\end{itemize}
+\end{itemize}
+\end{shadedquotation}
+\end{quote}
+
+\subsubsection{Sonic:}
+\label{sec:org3b0e749}
 
 Sonic is an early general purpose zk-SNARK protocol. The paper was published in January 2019, 10 months before this blog post was written, which is an eternity in zk-SNARK time. Sonic supports a universal and updatable common reference string. Sonic proofs are constant size, but verification is expensive. In theory, multiple proofs can be verified in batches to achieve better performance. Many of the new zk-SNARKs listed below are based on Sonic.
 
-\item Supersonic
+\subsubsection{Supersonic}
+\label{sec:org0f70928}
 
 We present a generic compilation of any PIOP using our DARK polynomial commitment scheme. In particular, compiling the PIOP from PLONK (GWC, ePrint’19), an improvement on Sonic (MBKM, CCS’19), yields a public-coin interactive argument with quasi-linear preprocessing, quasi-linear (online) prover time, logarithmic communication, and logarithmic (online) verification time in the circuit size. Applying the Fiat-Shamir transform results in a SNARK, which we call Supersonic.
 
-\item Marlin:
+\subsubsection{Marlin:}
+\label{sec:orgd5d4c1c}
 
-Marlin is an improvement on Sonic with 10x better prover time and 4x better verification times.
+Marlin is an improvement on Sonic with 10x better prover time and 4x better verification times
 
-\item Plonk:
+\begin{enumerate}
+\item Darlin
+\label{sec:org0dacdb8}
+
+\begin{quote}
+\begin{shadedquotation}
+...a succinct zero-knowledge argument of knowledge based on the Marlin SNARK \cite{cryptoeprint:2019/1047} and the ‘dlog’ polynomial commitment scheme from \cite{cryptoeprint:2016/263}, \cite{8418611}. Darlin addresses recursive proofs by integrating the amortization technique from Halo \cite{Bowe2020RecursivePC} for the non-succinct parts of the dlog verifier, and we adapt their strategy for bivariate circuit encoding polynomials to aggregate Marlin’s inner sumchecks across the nodes the recursive scheme...
+\end{shadedquotation}
+\end{quote}
+\end{enumerate}
+
+\subsubsection{Plonk:}
+\label{sec:org78172dd}
 
 Plonk is an improvement on Sonic with a 5x better prover time.
 
-\item Halo \& Halo2
+\subsubsection{Plonk improvements}
+\label{sec:org061f1a9}
+
+\begin{itemize}
+\item SHPLONK: multiple commits
+\item TurboPLONK: Custom gates (e.g. EC point addition gates, greatly reducing pairing's computation cost)
+\item Kimchi
+\item PLOOKUP: SNARK-unfriendly functions
+\item Zexe PLONK: PLONK single-layer rollup with BLS12-377 + BW6-761
+\item FFlonk
+\item Plonky2
+\end{itemize}
+
+\subsubsection{Halo \& Halo2}
+\label{sec:org7c2dab6}
 
 Halo is a zk-SNARK that supports recursive proof composition without a trusted setup. Recursion works using “nested amortization”: repeatedly collapsing multiple proofs together over cycles of elliptic curves.
 
 Unlike the other new constructs, Halo’s verification time is linear, making it the only new construct that isn’t succinct.
 
-\item Spartan
+\subsubsection{Other}
+\label{sec:org3556e67}
+
+\begin{itemize}
+\item Fractal
 
 \item Nova
+
+\item Spartan
 
 \item Quarks
 
@@ -284,13 +457,17 @@ Unlike the other new constructs, Halo’s verification time is linear, making it
 \end{itemize}
 
 \subsection{Application development}
-\label{sec:orge669a39}
+\label{sec:org475002a}
+
+\begin{center}
+\includegraphics[width=.9\linewidth]{/Users/toeinriver/Desktop/zkhw-1/zkSNARKs Application Development.png}
+\end{center}
 
 \subsection{Summary}
-\label{sec:org3388203}
+\label{sec:orgddb552f}
 
 \subsubsection{Comparative analysis}
-\label{sec:orgf11a726}
+\label{sec:orgf3f8aa6}
 \begin{center}
 \begin{tabular}{lll}
 Protocol & Pros & Cons\\
@@ -301,49 +478,36 @@ Bulletproof &  & \\
 Plonk &  & \\
 Halo \& Halo2 &  & \\
 \end{tabular}
+
 \end{center}
 
-\subsubsection{Outlook}
-\label{sec:org9b8a83a}
-
-\begin{enumerate}
-\item Recursive ZK Proofs
-\label{sec:orgfe82cc6}
+\subsection{Outlook}
+\label{sec:orgcc2e7a4}
+\subsubsection{Recursive ZK Proofs}
+\label{sec:orgfb37b8a}
 
 Recursive zero-knowledge SNARKs are one of the most interesting use cases for zero-knowledge technology that are almost ready for practical use. As the name suggests, recursive ZK SNARKs unlock the ability to take a proof and verify it inside another proof, allowing for a lot more composability without blowing up proving/verifying times. Besides the real-world composability advantages, recursive zero-knowledge SNARKs are also of great interest because of their use case as a blockchain scaling solution, relying on the succinct- ness feature of SNARKs to compress secure verification of long blockchains. Mina Protocol ([Bonneau et al. 2020]) is currently implementing such an approach.
 
 It should, however, come as no surprise that efficient recursive ZK SNARK constructions are quite hard to pull off. With the typical method of SNARK constructions that uses elliptic curve fields, the initial, hairy problem to solve is to find a pairing-friendly curve (see [Bitansky et al. 2013a]). Attempting to solve for this yields many interesting tradeoffs. Many of the options and possibilities have been explored in recent works such as Halo [Bowe et al. 2019], which uses elliptic curve cycles that do not require pairings and Fractal [Chiesa et al. 2020b], that eliminates the use of elliptic curves altogether. Overall, the study of efficient recursive ZK proofs is of great importance, and ripe territory for further exploration.
 
-
-\item Post-Quantum Zero-Knowledge
-\label{sec:org1cb6b46}
+\subsubsection{Post-Quantum Zero-Knowledge}
+\label{sec:orga1ab33b}
 
 Many of the techniques described in previous sections depend on the computational hardness of certain problems, such as computing the discrete logarithm, which have been shown solvable by quantum computers in polynomial time by [Shor 1997]. Therefore, quantum computers may pose a significant threat to the security model and practicality of zk-SNARKs that use these techniques. There has been some work on making quantum attack resistant zk-SNARKs. For instance, [Gennaro et al. 2018] recently proposed a lattice-based zk-SNARK starting with SSP — square span programs (an alternative to the QAP intermediate for boolean circuits). Lattice problems are known to hold against quantum attacks [Ajtai 1996], so this is a very promising line of work.
 
-
-\item Optimizations
-\label{sec:orgdc8ef03}
-
-\begin{itemize}
-\item Plonk:
+\subsubsection{Optimizations}
+\label{sec:orgb9a4ad9}
 
 \begin{itemize}
-\item SHPLONK: multiple commits
-\item TurboPLONK: Custom gates (e.g. EC point addition gates, greatly reducing pairing's computation cost)
-\item PLOOKUP: SNARK-unfriendly functions
-\item Zexe PLONK: PLONK single-layer rollup with BLS12-377 + BW6-761
-\end{itemize}
-
 \item Blockchain transaction fee:
 
 FFLONK \cite{cryptoeprint:2021/1167}, a modification of the popular PLONK zk-SNARK scheme, was motivated by ethereum gas fee reduction. Modification to KZG commitments that allows for reducing the scalar multiplications necessary to verify the proof by nearly three times, albeit at the cost of almost tripling proof construction time.
 \end{itemize}
 
-\item Fiat-Shamir-Compatible Hash Functions
-\label{sec:org8c8bb08}
+\subsubsection{Fiat-Shamir-Compatible Hash Functions}
+\label{sec:orgec22381}
 
 Currently Fiat-Shamir heuristic's security is only proven in the Random Oracle Model. It remains an open question whether there exist concrete hash functions that are compatible with the Fiat Shamir heuristic, i.e. if there exist hash functions that guarantee soundness for a transformed proof (and are also compatible with zero-knowledge proofs). There has been a lot of work on this topic, but there is still no known universal hash function that can be proven to be compatible without making strong, somewhat impractical, assumptions yet.
 
 \printbibliography
-\end{enumerate}
 \end{document}

@@ -71,6 +71,92 @@
       \verb https://doi.org/10.1145/22145.22178
       \endverb
     \endentry
+    \entry{10.1145/129712.129782}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=4591268c67f1c3a2dddd96c8b3457967}{%
+           family={Kilian},
+           familyi={K\bibinitperiod},
+           given={Joe},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Victoria, British Columbia, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4591268c67f1c3a2dddd96c8b3457967}
+      \strng{fullhash}{4591268c67f1c3a2dddd96c8b3457967}
+      \strng{bibnamehash}{4591268c67f1c3a2dddd96c8b3457967}
+      \strng{authorbibnamehash}{4591268c67f1c3a2dddd96c8b3457967}
+      \strng{authornamehash}{4591268c67f1c3a2dddd96c8b3457967}
+      \strng{authorfullhash}{4591268c67f1c3a2dddd96c8b3457967}
+      \field{labelalpha}{Kil92}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this note, we present new zero-knowledge interactive proofs and arguments for languages in NP. To show that x ε L, with an error probability of at most 2-k, our zero-knowledge proof system requires O(|x|c1)+O(lgc2|x|)k ideal bit commitments, where c1 and c2 depend only on L. This construction is the first in the ideal bit commitment model that achieves large values of k more efficiently than by running k independent iterations of the base interactive proof system. Under suitable complexity assumptions, we exhibit zero knowledge arguments that require O(lgc|x|kl bits of communication, where c depends only on L, and l is the security parameter for the prover. This is the first construction in which the total amount of communication can be less than that needed to transmit the NP witness. Our protocols are based on efficiently checkable proofs for NP[4].}
+      \field{booktitle}{Proceedings of the Twenty-Fourth Annual ACM Symposium on Theory of Computing}
+      \field{isbn}{0897915119}
+      \field{series}{STOC '92}
+      \field{title}{A Note on Efficient Zero-Knowledge Proofs and Arguments (Extended Abstract)}
+      \field{year}{1992}
+      \field{pages}{723\bibrangedash 732}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/129712.129782
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/129712.129782
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/129712.129782
+      \endverb
+    \endentry
+    \entry{10.1007/3-540-69053-0_18}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=b7ce99f593e2c7899b27afe41a6c28a0}{%
+           family={Shoup},
+           familyi={S\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=c7eed0e14190a9d15cbeb3ba8c0c5951}{%
+           family={Fumy},
+           familyi={F\bibinitperiod},
+           given={Walter},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{fullhash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{bibnamehash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{authorbibnamehash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{authornamehash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{authorfullhash}{b7ce99f593e2c7899b27afe41a6c28a0}
+      \strng{editorbibnamehash}{c7eed0e14190a9d15cbeb3ba8c0c5951}
+      \strng{editornamehash}{c7eed0e14190a9d15cbeb3ba8c0c5951}
+      \strng{editorfullhash}{c7eed0e14190a9d15cbeb3ba8c0c5951}
+      \field{labelalpha}{Sho97}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper considers the computational complexity of the discrete logarithm and related problems in the context of ``generic algorithms''---that is, algorithms which do not exploit any special properties of the encodings of group elements, other than the property that each group element is encoded as a unique binary string. Lower bounds on the complexity of these problems are proved that match the known upper bounds: any generic algorithm must perform $\Omega$(p1/2) group operations, where p is the largest prime dividing the order of the group. Also, a new method for correcting a faulty Diffie-Hellman oracle is presented.}
+      \field{booktitle}{Advances in Cryptology --- EUROCRYPT '97}
+      \field{isbn}{978-3-540-69053-5}
+      \field{title}{Lower Bounds for Discrete Logarithms and Related Problems}
+      \field{year}{1997}
+      \field{pages}{256\bibrangedash 266}
+      \range{pages}{11}
+    \endentry
     \entry{10.1145/273865.273901}{article}{}
       \name{author}{2}{}{%
         {{hash=8e08b59145b9531815169c7ed0a0b055}{%
@@ -121,6 +207,53 @@
       \verb https://doi.org/10.1145/273865.273901
       \endverb
       \keyw{interactive computation,proof checking,hardness of approximations,trade-offs/relations among complexity measures,probabilistic computation,NP-completeness,reducibility and completeness,error-correcting codes,complexity hierarchies,approximation algorithms,computations on polynomials and finite fields}
+    \endentry
+    \entry{10.1137/S0097539795284959}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fb54c363f1b0d126e883c84df49e4790}{%
+           family={Micali},
+           familyi={M\bibinitperiod},
+           given={Silvio},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{2}{%
+        {Society for Industrial}%
+        {Applied Mathematics}%
+      }
+      \strng{namehash}{fb54c363f1b0d126e883c84df49e4790}
+      \strng{fullhash}{fb54c363f1b0d126e883c84df49e4790}
+      \strng{bibnamehash}{fb54c363f1b0d126e883c84df49e4790}
+      \strng{authorbibnamehash}{fb54c363f1b0d126e883c84df49e4790}
+      \strng{authornamehash}{fb54c363f1b0d126e883c84df49e4790}
+      \strng{authorfullhash}{fb54c363f1b0d126e883c84df49e4790}
+      \field{labelalpha}{Mic00}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper puts forward a new notion of a proof based on computational complexity and explores its implications for computation at large. Computationally sound proofs provide, in a novel and meaningful framework, answers to old and new questions in complexity theory. In particular, given a random oracle or a new complexity assumption, they enable us to prove that verifying is easier than deciding for all theorems; provide a quite effective way to prove membership in computationally hard languages (such as ${cal C}o$-$cal N cal P$-complete ones); and show that every computation possesses a short certificate vouching its correctness. Finally, if a special type of computationally sound proof exists, we show that Blum's notion of program checking can be meaningfully broadened so as to prove that $cal N cal P$-complete languages are checkable.}
+      \field{issn}{0097-5397}
+      \field{journaltitle}{SIAM J. Comput.}
+      \field{month}{10}
+      \field{number}{4}
+      \field{title}{Computationally Sound Proofs}
+      \field{volume}{30}
+      \field{year}{2000}
+      \field{pages}{1253\bibrangedash 1298}
+      \range{pages}{46}
+      \verb{doi}
+      \verb 10.1137/S0097539795284959
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1137/S0097539795284959
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1137/S0097539795284959
+      \endverb
+      \keyw{interactive proofs,Merkle trees,probabilistically checkable proofs,random oracles}
     \endentry
     \entry{10.5555/872747.873184}{inproceedings}{}
       \name{author}{2}{}{%
@@ -214,6 +347,45 @@
       \verb https://doi.org/10.1007/978-3-540-30576-7_18
       \endverb
     \endentry
+    \entry{Maurer05}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ba8e38e6733e9f881688e10c5d7661f5}{%
+           family={Maurer},
+           familyi={M\bibinitperiod},
+           given={Ueli},
+           giveni={U\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=8a95cc66959ef5def3eec3edbc99a2bd}{%
+           family={Smart},
+           familyi={S\bibinitperiod},
+           given={Nigel},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{fullhash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{bibnamehash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{authorbibnamehash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{authornamehash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{authorfullhash}{ba8e38e6733e9f881688e10c5d7661f5}
+      \strng{editorbibnamehash}{8a95cc66959ef5def3eec3edbc99a2bd}
+      \strng{editornamehash}{8a95cc66959ef5def3eec3edbc99a2bd}
+      \strng{editorfullhash}{8a95cc66959ef5def3eec3edbc99a2bd}
+      \field{labelalpha}{Mau05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Cryptography and Coding 2005}
+      \field{month}{12}
+      \field{series}{Lecture Notes in Computer Science}
+      \field{title}{Abstract Models of Computation in Cryptography}
+      \field{volume}{3796}
+      \field{year}{2005}
+    \endentry
     \entry{10.1007/11761679_21}{inproceedings}{}
       \name{author}{3}{}{%
         {{hash=f0d5c2124aca42e40182208688a5ccbf}{%
@@ -265,6 +437,188 @@
       \field{title}{Perfect Non-interactive Zero Knowledge for NP}
       \field{year}{2006}
       \field{pages}{339\bibrangedash 358}
+      \range{pages}{20}
+    \endentry
+    \entry{10.5555/1834954}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=bd007b2a3d698c39bd758b253f7c2ebf}{%
+           family={Gentry},
+           familyi={G\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Stanford, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{fullhash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{bibnamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authorbibnamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authornamehash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \strng{authorfullhash}{bd007b2a3d698c39bd758b253f7c2ebf}
+      \field{labelalpha}{Gen09}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose the first fully homomorphic encryption scheme, solving an old open problem. Such a scheme allows one to compute arbitrary functions over encrypted data without the decryption key—i.e., given encryptions E ( m 1), ..., E ( m t ) of m 1, ..., m t, one can efficiently compute a compact ciphertext that encrypts f ( m 1, ..., m t ) for any efficiently computable function f . Fully homomorphic encryption has numerous applications. For example, it enables encrypted search engine queries—i.e., a search engine can give you a succinct encrypted answer to your (boolean) query without even knowing what your query was. It also enables searching on encrypted data; you can store your encrypted data on a remote server, and later have the server retrieve only files that (when decrypted) satisfy some boolean constraint, even though the server cannot decrypt the files on its own. More broadly, it improves the efficiency of secure multiparty computation. In our solution, we begin by designing a somewhat homomorphic "boostrappable" encryption scheme that works when the function f is the scheme's own decryption function. We then show how, through recursive self-embedding, bootstrappable encryption gives fully homomorphic encryption.}
+      \field{isbn}{9781109444506}
+      \field{note}{AAI3382729}
+      \field{title}{A Fully Homomorphic Encryption Scheme}
+      \field{type}{phdthesis}
+      \field{year}{2009}
+    \endentry
+    \entry{10.1007/978-3-642-14623-7_26}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=8401c0f81756b984b93692839bd194e2}{%
+           family={Chung},
+           familyi={C\bibinitperiod},
+           given={Kai-Min},
+           giveni={K\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=3e546b3537a53030cb6d95958d6f7e7c}{%
+           family={Kalai},
+           familyi={K\bibinitperiod},
+           given={Yael},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c915d3380da8c4288e9634bbee5ba983}{%
+           family={Vadhan},
+           familyi={V\bibinitperiod},
+           given={Salil},
+           giveni={S\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d0a232b92e9efa1d3b250cd86aeee031}{%
+           family={Rabin},
+           familyi={R\bibinitperiod},
+           given={Tal},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{fullhash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{bibnamehash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{authorbibnamehash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{authornamehash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{authorfullhash}{af8568ee7716cd60431935e67d96ec86}
+      \strng{editorbibnamehash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \strng{editornamehash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \strng{editorfullhash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \field{labelalpha}{CKV10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Following Gennaro, Gentry, and Parno (Cryptology ePrint Archive 2009/547), we use fully homomorphic encryption to design improved schemes for delegating computation. In such schemes, a delegator outsources the computation of a function F on many, dynamically chosen inputs xito a worker in such a way that it is infeasible for the worker to make the delegator accept a result other than F(xi). The ``online stage'' of the Gennaro et al. scheme is very efficient: the parties exchange two messages, the delegator runs in time poly(logT), and the worker runs in time poly(T), where T is the time complexity of F. However, the ``offline stage'' (which depends on the function F but not the inputs to be delegated) is inefficient: the delegator runs in time poly(T) and generates a public key of length poly(T) that needs to be accessed by the worker during the online stage.}
+      \field{booktitle}{Advances in Cryptology -- CRYPTO 2010}
+      \field{isbn}{978-3-642-14623-7}
+      \field{title}{Improved Delegation of Computation Using Fully Homomorphic Encryption}
+      \field{year}{2010}
+      \field{pages}{483\bibrangedash 501}
+      \range{pages}{19}
+    \endentry
+    \entry{10.1007/978-3-642-14623-7_25}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=396b77758cff985563d9ea220c451d0d}{%
+           family={Gennaro},
+           familyi={G\bibinitperiod},
+           given={Rosario},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bd007b2a3d698c39bd758b253f7c2ebf}{%
+           family={Gentry},
+           familyi={G\bibinitperiod},
+           given={Craig},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d1c3ff1d03867d809be05c74fdae1593}{%
+           family={Parno},
+           familyi={P\bibinitperiod},
+           given={Bryan},
+           giveni={B\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=d0a232b92e9efa1d3b250cd86aeee031}{%
+           family={Rabin},
+           familyi={R\bibinitperiod},
+           given={Tal},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{fullhash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{bibnamehash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{authorbibnamehash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{authornamehash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{authorfullhash}{22859ca6155eda53abd09331be18ea1c}
+      \strng{editorbibnamehash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \strng{editornamehash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \strng{editorfullhash}{d0a232b92e9efa1d3b250cd86aeee031}
+      \field{labelalpha}{GGP10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We introduce and formalize the notion of Verifiable Computation, which enables a computationally weak client to ``outsource'' the computation of a function F on various dynamically-chosen inputs x1,...,xkto one or more workers. The workers return the result of the function evaluation, e.g., yi{\thinspace}={\thinspace}F(xi), as well as a proof that the computation of F was carried out correctly on the given value xi. The primary constraint is that the verification of the proof should require substantially less computational effort than computing F(xi) from scratch.}
+      \field{booktitle}{Advances in Cryptology -- CRYPTO 2010}
+      \field{isbn}{978-3-642-14623-7}
+      \field{title}{Non-interactive Verifiable Computing: Outsourcing Computation to Untrusted Workers}
+      \field{year}{2010}
+      \field{pages}{465\bibrangedash 482}
+      \range{pages}{18}
+    \endentry
+    \entry{10.1007/978-3-642-17373-8_19}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=f0d5c2124aca42e40182208688a5ccbf}{%
+           family={Groth},
+           familyi={G\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=1192bfc964ee66317d0fa52f9476fc9d}{%
+           family={Abe},
+           familyi={A\bibinitperiod},
+           given={Masayuki},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{fullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{bibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorbibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authornamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorfullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{editorbibnamehash}{1192bfc964ee66317d0fa52f9476fc9d}
+      \strng{editornamehash}{1192bfc964ee66317d0fa52f9476fc9d}
+      \strng{editorfullhash}{1192bfc964ee66317d0fa52f9476fc9d}
+      \field{extraname}{1}
+      \field{labelalpha}{Gro10}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We construct non-interactive zero-knowledge arguments for circuit satisfiability with perfect completeness, perfect zero-knowledge and computational soundness. The non-interactive zero-knowledge arguments have sub-linear size and very efficient public verification. The size of the non-interactive zero-knowledge arguments can even be reduced to a constant number of group elements if we allow the common reference string to be large. Our constructions rely on groups with pairings and security is based on two new cryptographic assumptions; we do not use the Fiat-Shamir heuristic or random oracles.}
+      \field{booktitle}{Advances in Cryptology - ASIACRYPT 2010}
+      \field{isbn}{978-3-642-17373-8}
+      \field{title}{Short Pairing-Based Non-interactive Zero-Knowledge Arguments}
+      \field{year}{2010}
+      \field{pages}{321\bibrangedash 340}
       \range{pages}{20}
     \endentry
     \entry{Kate}{inproceedings}{}
@@ -370,6 +724,9 @@
       \range{pages}{24}
       \verb{doi}
       \verb 10.1145/2090236.2090263
+      \endverb
+      \verb{file}
+      \verb /Users/toeinriver/Library/Mobile\ Documents/com~apple~CloudDocs/Markdown/From\ Extractable\ Collision\ Resistance\ to\ Succinct\ Non-Interactive\ Arguments\ of\ Knowledge,\ and\ Back\ Again.pdf
       \endverb
       \verb{urlraw}
       \verb https://doi.org/10.1145/2090236.2090263
@@ -484,6 +841,110 @@
       \verb 10.1109/SP.2013.47
       \endverb
     \endentry
+    \entry{10.1145/2699436}{article}{}
+      \name{author}{3}{}{%
+        {{hash=39e4a0690915f1d991133196a545b37b}{%
+           family={Goldwasser},
+           familyi={G\bibinitperiod},
+           given={Shafi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=482df7d0138a4e484da58b3748958a2b}{%
+           family={Kalai},
+           familyi={K\bibinitperiod},
+           given={Yael\bibnamedelima Tauman},
+           giveni={Y\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=8386b9fcc2a9783ef59c9c2cc1fd2396}{%
+           family={Rothblum},
+           familyi={R\bibinitperiod},
+           given={Guy\bibnamedelima N.},
+           giveni={G\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{87a34cbcd4454ebdd211fe956241ddda}
+      \strng{fullhash}{87a34cbcd4454ebdd211fe956241ddda}
+      \strng{bibnamehash}{87a34cbcd4454ebdd211fe956241ddda}
+      \strng{authorbibnamehash}{87a34cbcd4454ebdd211fe956241ddda}
+      \strng{authornamehash}{87a34cbcd4454ebdd211fe956241ddda}
+      \strng{authorfullhash}{87a34cbcd4454ebdd211fe956241ddda}
+      \field{labelalpha}{GKR15}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{In this work we study interactive proofs for tractable languages. The (honest) prover should be efficient and run in polynomial time or, in other words, a “muggle”.1 The verifier should be super-efficient and run in nearly linear time. These proof systems can be used for delegating computation: a server can run a computation for a client and interactively prove the correctness of the result. The client can verify the result’s correctness in nearly linear time (instead of running the entire computation itself).Previously, related questions were considered in the holographic proof setting by Babai et al. [1991b] in the argument setting under computational assumptions by Kilian, and in the random oracle model by Micali [1994]. Our focus, however, is on the original interactive proof model where no assumptions are made on the computational power or adaptiveness of dishonest provers.Our main technical theorem gives a public coin interactive proof for any language computable by a log-space uniform boolean circuit with depth d and input length n. The verifier runs in time n · poly(d, log(n)) and space O(log(n)), the communication complexity is poly(d, log(n)), and the prover runs in time poly(n). In particular, for languages computable by log-space uniform NC (circuits of polylog(n) depth), the prover is efficient, the verifier runs in time n · polylog(n) and space O(log(n)), and the communication complexity is polylog(n). Using this theorem we make progress on several questions.--- We show how to construct 1-round computationally sound arguments with polylog communication for any log-space uniform NC computation. The verifier runs in quasi-linear time. This result uses a recent transformation of Kalai and Raz from public coin interactive proofs to 1-round arguments. The soundness of the argument system is based on the existence of a PIR scheme with polylog communication.--- We construct interactive proofs with public coin, log-space, poly-time verifiers for all of P are given. This settles an open question regarding the expressive power of proof systems with such verifiers.--- We construct zero-knowledge interactive proofs are given with communication complexity quasi-linear in the witness length for any NP language verifiable in NC, based on the existence of 1-way functions.--- We construct probabilistically checkable arguments (a model due to Kalai and Raz) of size polynomial in the witness length (rather than instance length) for any NP language verifiable in NC, under computational assumptions, are provided.}
+      \field{issn}{0004-5411}
+      \field{journaltitle}{J. ACM}
+      \field{month}{9}
+      \field{number}{4}
+      \field{title}{Delegating Computation: Interactive Proofs for Muggles}
+      \field{volume}{62}
+      \field{year}{2015}
+      \verb{doi}
+      \verb 10.1145/2699436
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/2699436
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/2699436
+      \endverb
+      \keyw{Delegating computation,interactive proofs,verifiable computing}
+    \endentry
+    \entry{cryptoeprint:2016/263}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=08b87a25d40227212bb21975cbcb33c5}{%
+           family={Bootle},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c9674d9ab7f569513d6a9477f5604cbe}{%
+           family={Cerulli},
+           familyi={C\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b0542d93e1fcf8c2adfd7d66ab22543b}{%
+           family={Chaidos},
+           familyi={C\bibinitperiod},
+           given={Pyrros},
+           giveni={P\bibinitperiod}}}%
+        {{hash=f0d5c2124aca42e40182208688a5ccbf}{%
+           family={Groth},
+           familyi={G\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f8cb552349cc443e67d3d4d6f6f71044}{%
+           family={Petit},
+           familyi={P\bibinitperiod},
+           given={Christophe},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{fea649826d83ddd4be43843981083d4b}
+      \strng{fullhash}{454f74919ff98fa40079cdc03f48a7b5}
+      \strng{bibnamehash}{fea649826d83ddd4be43843981083d4b}
+      \strng{authorbibnamehash}{fea649826d83ddd4be43843981083d4b}
+      \strng{authornamehash}{fea649826d83ddd4be43843981083d4b}
+      \strng{authorfullhash}{454f74919ff98fa40079cdc03f48a7b5}
+      \field{labelalpha}{Boo+16}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cryptology ePrint Archive, Paper 2016/263}
+      \field{note}{\url{https://eprint.iacr.org/2016/263}}
+      \field{title}{Efficient Zero-Knowledge Arguments for Arithmetic Circuits in the Discrete Log Setting}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2016/263
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2016/263
+      \endverb
+    \endentry
     \entry{10.1007/978-3-319-63715-0_20}{inproceedings}{}
       \name{author}{2}{}{%
         {{hash=f0d5c2124aca42e40182208688a5ccbf}{%
@@ -536,6 +997,114 @@
       \field{year}{2017}
       \field{pages}{581\bibrangedash 612}
       \range{pages}{32}
+    \endentry
+    \entry{8418611}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=188658a4b692b633b6c2576bc1fac67e}{%
+           family={Bünz},
+           familyi={B\bibinitperiod},
+           given={Benedikt},
+           giveni={B\bibinitperiod}}}%
+        {{hash=08b87a25d40227212bb21975cbcb33c5}{%
+           family={Bootle},
+           familyi={B\bibinitperiod},
+           given={Jonathan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9ef331cc9e5b527723547dfa1becd8cf}{%
+           family={Boneh},
+           familyi={B\bibinitperiod},
+           given={Dan},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fe914f862504c238885350db24127f4a}{%
+           family={Poelstra},
+           familyi={P\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2b412289584d398c21473720d90bf541}{%
+           family={Wuille},
+           familyi={W\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod}}}%
+        {{hash=6ed451a5305d52289f2b57a9f92a048d}{%
+           family={Maxwell},
+           familyi={M\bibinitperiod},
+           given={Greg},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{fullhash}{5be97f70c03c6605e1d5dfcf51abfb9a}
+      \strng{bibnamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authorbibnamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authornamehash}{ac27112af00116b55692e56da21ff6f6}
+      \strng{authorfullhash}{5be97f70c03c6605e1d5dfcf51abfb9a}
+      \field{labelalpha}{Bün+18}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE Symposium on Security and Privacy (SP)}
+      \field{title}{Bulletproofs: Short Proofs for Confidential Transactions and More}
+      \field{year}{2018}
+      \field{pages}{315\bibrangedash 334}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/SP.2018.00020
+      \endverb
+    \endentry
+    \entry{cryptoeprint:2019/1047}{misc}{}
+      \name{author}{6}{}{%
+        {{hash=dfbdc8dc8205deeb7a8fbc765799dd0b}{%
+           family={Chiesa},
+           familyi={C\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9ee06ae292a39ca1bafe80836e3b0c51}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={Yuncong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc4e6e0ef26dafc646ac4b6db8636b1d}{%
+           family={Maller},
+           familyi={M\bibinitperiod},
+           given={Mary},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7a31ae48766fecee5a26de15205949fc}{%
+           family={Mishra},
+           familyi={M\bibinitperiod},
+           given={Pratyush},
+           giveni={P\bibinitperiod}}}%
+        {{hash=e314283c746bd2dea3a28aad0d15ab56}{%
+           family={Vesely},
+           familyi={V\bibinitperiod},
+           given={Psi},
+           giveni={P\bibinitperiod}}}%
+        {{hash=0994d5d46f72d63ad29956d030637392}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f514cced1fbad68c050ddbdaa0731a3}
+      \strng{fullhash}{6aaa1d15f668212407332281617bd692}
+      \strng{bibnamehash}{9f514cced1fbad68c050ddbdaa0731a3}
+      \strng{authorbibnamehash}{9f514cced1fbad68c050ddbdaa0731a3}
+      \strng{authornamehash}{9f514cced1fbad68c050ddbdaa0731a3}
+      \strng{authorfullhash}{6aaa1d15f668212407332281617bd692}
+      \field{labelalpha}{Chi+19}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Cryptology ePrint Archive, Paper 2019/1047}
+      \field{note}{\url{https://eprint.iacr.org/2019/1047}}
+      \field{title}{Marlin: Preprocessing zkSNARKs with Universal and Updatable SRS}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2019/1047
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2019/1047
+      \endverb
     \endentry
     \entry{Gabizon2019PLONKPO}{article}{}
       \name{author}{3}{}{%
@@ -616,6 +1185,82 @@
       \verb{doi}
       \verb 10.1145/3319535.3339817
       \endverb
+    \endentry
+    \entry{DBLP:journals/corr/abs-2008-00881}{article}{}
+      \name{author}{3}{}{%
+        {{hash=56f7bc02f480f1baaf76f4461aded2a1}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Aritra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=6176cf8e13e2ee3dcaab784fe8d14b42}{%
+           family={Clear},
+           familyi={C\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=2dcd78d029c0c8ffa318884224f24c3b}{%
+           family={Tewari},
+           familyi={T\bibinitperiod},
+           given={Hitesh},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e088ffc57227770024544010d39e2aae}
+      \strng{fullhash}{e088ffc57227770024544010d39e2aae}
+      \strng{bibnamehash}{e088ffc57227770024544010d39e2aae}
+      \strng{authorbibnamehash}{e088ffc57227770024544010d39e2aae}
+      \strng{authornamehash}{e088ffc57227770024544010d39e2aae}
+      \strng{authorfullhash}{e088ffc57227770024544010d39e2aae}
+      \field{labelalpha}{BCT20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Demystifying the Role of zk-SNARKs in Zcash}
+      \field{volume}{abs/2008.00881}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2008.00881
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2008.00881
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2008.00881
+      \endverb
+    \endentry
+    \entry{Bowe2020RecursivePC}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=0274806506056a5f9c69300287f6063a}{%
+           family={Bowe},
+           familyi={B\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+        {{hash=03957f01b350f39bac8f4c7933a7d5e6}{%
+           family={Grigg},
+           familyi={G\bibinitperiod},
+           given={Jack},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1c1095c9d1e61240ce94aa7bde05c36f}{%
+           family={Hopwood},
+           familyi={H\bibinitperiod},
+           given={Daira},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e080473921fc0fb08d20f02e374081c}
+      \strng{fullhash}{0e080473921fc0fb08d20f02e374081c}
+      \strng{bibnamehash}{0e080473921fc0fb08d20f02e374081c}
+      \strng{authorbibnamehash}{0e080473921fc0fb08d20f02e374081c}
+      \strng{authornamehash}{0e080473921fc0fb08d20f02e374081c}
+      \strng{authorfullhash}{0e080473921fc0fb08d20f02e374081c}
+      \field{labelalpha}{BGH20}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Recursive Proof Composition without a Trusted Setup}
+      \field{year}{2020}
     \endentry
     \entry{Gabizon2020plookupAS}{article}{}
       \name{author}{2}{}{%
@@ -706,6 +1351,62 @@
       \verb{url}
       \verb https://eprint.iacr.org/2021/1167
       \endverb
+    \endentry
+    \entry{groth_size_nodate}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=f0d5c2124aca42e40182208688a5ccbf}{%
+           family={Groth},
+           familyi={G\bibinitperiod},
+           given={Jens},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{fullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{bibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorbibnamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authornamehash}{f0d5c2124aca42e40182208688a5ccbf}
+      \strng{authorfullhash}{f0d5c2124aca42e40182208688a5ccbf}
+      \field{extraname}{2}
+      \field{labelalpha}{Gro}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Published: Cryptology ePrint Ar{\textbackslash}-chive: Report 2016/260. Last revised May 31, 2016.}
+      \field{title}{On the {Size} of {Pairing}-based {Non}-interactive {Arguments}}
+      \field{urlday}{3}
+      \field{urlmonth}{8}
+      \field{urlyear}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eprint.iacr.org/2016/260
+      \endverb
+      \verb{url}
+      \verb https://eprint.iacr.org/2016/260
+      \endverb
+    \endentry
+    \entry{pairing_guide}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9097c5640575ced9ed0ddc1fd5c2de58}{%
+           family={Nadia\bibnamedelimb El\bibnamedelima Mrabet},
+           familyi={N\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Eds.},
+           giveni={E\bibinitperiod},
+           suffix={Marc\bibnamedelima Joye},
+           suffixi={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \strng{fullhash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \strng{bibnamehash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \strng{authorbibnamehash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \strng{authornamehash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \strng{authorfullhash}{9097c5640575ced9ed0ddc1fd5c2de58}
+      \field{labelalpha}{Nad}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Guide to Pairing-Based Cryptography}
     \endentry
   \enddatalist
 \endrefsection
